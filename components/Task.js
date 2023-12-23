@@ -16,7 +16,7 @@ import SharedTodoModalContent from "./SharedTodosModalContent";
 
 function CheckMark({ id, completed, toggleTodo }) {
   async function toggle() {
-    const response = await fetch(`http://localhost:8080/todos/${id}`, {
+    const response = await fetch(`https://tasklistback-end0.onrender.com/todos/${id}`, {
       headers: {
         "x-api-key": "abcdef123456",
         "Content-Type": "application/json",
@@ -65,7 +65,7 @@ export default function Task({
   }
 
   async function deleteTodo() {
-    const response = await fetch(`http://localhost:8080/todos/${id}`, {
+    const response = await fetch(`https://tasklistback-end0.onrender.com/todos/${id}`, {
       headers: {
         "x-api-key": "abcdef123456",
       },

@@ -7,7 +7,7 @@ export default function TodoModalContent({ id, title }) {
   const [focus, setFocus] = useState(false);
 
   const handleSubmit = async () => {
-    const response = await fetch("http://localhost:8080/todos/shared_todos", {
+    const response = await fetch("https://tasklistback-end0.onrender.com/todos/shared_todos", {
       headers: {
         "x-api-key": "abcdef123456",
         "Content-Type": "application/json",

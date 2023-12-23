@@ -15,7 +15,7 @@ export default function SharedTodoModalContent({
 
   async function fetchInfo() {
     const response = await fetch(
-      `http://localhost:8080/todos/shared_todos/${id}`,
+      `https://tasklistback-end0.onrender.com/todos/shared_todos/${id}`,
       {
         headers: {
           "x-api-key": "abcdef123456",
