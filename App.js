@@ -13,7 +13,7 @@ export default function App() {
   }, []);
 
   async function fetchTodos() {
-    const response = await fetch("http://localhost:8080/todos/1", {
+    const response = await fetch("https://tasklistback-end0.onrender.com/todos/1", {
       headers: {
         "x-api-key": "abcdef123456",
       },
