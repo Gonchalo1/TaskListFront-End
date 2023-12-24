@@ -15,7 +15,9 @@ export default function App() {
   async function fetchTodos() {
     const response = await fetch("https://tasklistback-end0.onrender.com/todos/1", {
       headers: {
-        "x-api-key": "abcdef123456",
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Origin': 'https://tasklistfront-end.onrender.com'
       },
     });
     const data = await response.json();
