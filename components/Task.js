@@ -17,10 +17,13 @@ import SharedTodoModalContent from "./SharedTodosModalContent";
 function CheckMark({ id, completed, toggleTodo }) {
   async function toggle() {
     const response = await fetch(`https://tasklistback-end0.onrender.com/todos/${id}`, {
-      headers: {
-        "x-api-key": "abcdef123456",
-        "Content-Type": "application/json",
+      headers: { headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Origin': '*'
       },
+      mode: 'cors',
+    },
       method: "PUT",
       body: JSON.stringify({
         value: completed ? false : true,
@@ -67,9 +70,12 @@ export default function Task({
   async function deleteTodo() {
     const response = await fetch(`https://tasklistback-end0.onrender.com/todos/${id}`, {
       headers: {
-        "x-api-key": "abcdef123456",
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Origin': '*'
       },
-      method: "DELETE",
+      mode: 'cors',
+    method: "DELETE",
     });
     clearTodo(id);
     console.log(response.status);

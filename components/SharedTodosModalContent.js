@@ -17,9 +17,13 @@ export default function SharedTodoModalContent({
     const response = await fetch(
       `https://tasklistback-end0.onrender.com/todos/shared_todos/${id}`,
       {
+       
         headers: {
-          "x-api-key": "abcdef123456",
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'Origin': '*'
         },
+        mode: 'cors',
         method: "GET",
       }
     );

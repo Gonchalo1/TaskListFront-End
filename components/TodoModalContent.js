@@ -9,8 +9,12 @@ export default function TodoModalContent({ id, title }) {
   const handleSubmit = async () => {
     const response = await fetch("https://tasklistback-end0.onrender.com/todos/shared_todos", {
       headers: {
-        "x-api-key": "abcdef123456",
-        "Content-Type": "application/json",
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'Origin': '*'
+        },
+        mode: 'cors',
       },
       method: "POST",
       body: JSON.stringify({

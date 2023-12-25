@@ -48,10 +48,13 @@ export default function InputTask({ todos, setTodos }) {
     } else {
       const response = await fetch("https://tasklistback-end0.onrender.com/todos", {
         headers: {
-          "x-api-key": "abcdef123456",
-          "Content-Type": "application/json",
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'Origin': '*'
         },
-        method: "POST",
+        mode: 'cors',
+      
+      method: "POST",
         body: JSON.stringify({
           user_id: 1,
           title: messageBody,

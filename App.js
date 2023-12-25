@@ -17,7 +17,7 @@ export default function App() {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Origin': 'https://tasklistfront-end.onrender.com'
+        'Origin': '*'
       },
     });
     const data = await response.json();
